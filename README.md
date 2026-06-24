@@ -21,10 +21,8 @@ Academic Year 2024
 
 | Application | URL |
 |-------------|-----|
-| **Personal Website** | `http://<EC2-PUBLIC-IP>` |
-| **Todo App** | `http://<EC2-PUBLIC-IP>:8080` |
-
-> ⚠️ Replace `<EC2-PUBLIC-IP>` with your actual EC2 instance public IP address.
+| **Personal Website** | [http://34.201.105.203](http://34.201.105.203) |
+| **Todo App** | [http://34.201.105.203:8080](http://34.201.105.203:8080) |
 
 ---
 
@@ -58,25 +56,7 @@ docker compose up -d --build
 # http://localhost:8080 → Todo app
 ```
 
-### Deploy to AWS EC2
 
-```bash
-# 1. SSH into your EC2 instance
-ssh -i your-key.pem ubuntu@<EC2-PUBLIC-IP>
-
-# 2. Clone the repository
-git clone https://github.com/LAX-822/Lab12.git
-cd Lab12
-
-# 3. Install Docker (if not installed)
-sudo apt update
-sudo apt install -y docker.io
-sudo systemctl start docker
-sudo usermod -aG docker ubuntu
-
-# 4. Start applications
-docker compose up -d --build
-```
 
 ---
 
