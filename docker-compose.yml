@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  my-site:
+    image: ghcr.io/lax-822/lab12/my-site:latest
+    build: .
+    ports:
+      - "80:80"
+    restart: always
+
+  todo-app:
+    build: ./todo
+    ports:
+      - "8080:80"
+    restart: always
